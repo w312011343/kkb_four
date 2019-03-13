@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		nav {
+			height: 200px;
+			background-color: red;
+			/* 将元素转化为块级元素 */
+			display: block;
+		}
+
+		header {
+			height: 200px;
+			background-color: orange;
+		}
+
+
+	</style>
+
+	<script type="text/javascript">
+		
+		//第一种解决方案
+		// document.createElement("nav");
+	</script>
+	<!-- //第二种解决方案： 通过js插件 -->
+
+
+    
+	<!-- <script type="text/javascript" src="code/语义标签兼容处理/html5shiv.min.js"></script> -->
+
+
+	<!-- 终极解决方案 -->
+	<!--[if lte IE 8]>
+		<script type="text/javascript" src="code/语义标签兼容处理/html5shiv.min.js"></script>
+	<![endif]-->
+
+
+</head>
+<body>
+	
+	<nav>自定义的标签</nav>
+
+	<header></header>
+	
+</body>
+</html>

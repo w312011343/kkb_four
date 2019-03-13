@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		 * {
+		 	margin:  0;
+		 	padding: 0;
+		 }
+
+		 .box {
+		 	width: 300px;
+		 	height: 300px;
+		 	margin: 50px auto;
+		 	background: pink url("1.png");
+		 	border: 10px dashed yellowgreen;
+		 	padding: 10px;
+
+		 	/* 背景裁切 */
+		 	background-clip: border-box;
+			
+			/* 将背景图片显示到内容区域 */
+		    background-clip: content-box;
+
+		    /* 将背景图片显示到内边距区域 */
+		    background-clip: padding-box;
+		 }
+	</style>
+</head>
+<body>
+	
+	 <div class="box"></div>
+</body>
+</html>
