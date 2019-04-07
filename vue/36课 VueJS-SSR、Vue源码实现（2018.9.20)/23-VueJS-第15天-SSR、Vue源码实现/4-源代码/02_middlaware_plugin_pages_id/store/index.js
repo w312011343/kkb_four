@@ -1,0 +1,21 @@
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+const store = () => new Vuex.Store({
+
+  state: {
+    counter: 0
+  },
+  mutations: {
+    increment (state) {
+      state.counter++
+    },
+    changeCounter (state,num) {
+        state.counter = num;
+    }
+  }
+})
+
+export default store

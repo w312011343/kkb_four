@@ -1,0 +1,82 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a class="router-link" href="/" >Home</a>
+    <a class="router-link" href="/about" >About</a>
+       
+
+    <div id="router-view">
+         <div id="home" style="background-color: red;width: 100%;height: 50px;display: none;"> 我是home的骨架屏</div>
+         <div id="about" style="background-color: yellowgreen;width: 100%;height: 50px; display: none;"> 我是about的骨架屏</div>
+    </div>
+
+    <script type="text/javascript">
+        // 是该显示谁的骨架屏
+        var pathname = location.pathname;
+        switch(pathname) {
+             case '/' :
+                    document.getElementById('home').style.display = 'block';
+                    break;
+             case '/about' :
+                     document.getElementById('about').style.display = 'block';
+                    break;
+        }
+    </script>
+    
+
+
+    <script type="text/javascript">
+        console.log('aaaa');
+        var a_s = document.querySelectorAll('a');
+        var routerView = document.getElementById('router-view');
+
+
+
+
+
+        function changeContent (href) {
+             switch (href) {
+                    case '/' :
+                        setTimeout(function(){
+                             routerView.innerHTML = `<div>
+                            首页
+                            </div>`;
+                        },2000)
+                       
+
+                    break;
+                    case '/about' :
+                        setTimeout(function(){
+                            routerView.innerHTML = `<div>
+                                关于我们
+                            </div>`;
+                         },2000)
+                    break;
+                }
+        }
+
+
+        // 初始行为
+        // 获取url路径
+        changeContent(location.pathname);
+
+
+        for (var i = a_s.length - 1; i >= 0; i--) {
+            a_s[i].addEventListener('click',function(e){
+                e.preventDefault();
+                var href = e.target.getAttribute('href');
+
+                // 变更地址栏
+                history.pushState({},'',href);
+                // 匹配 模拟一堆routes
+               changeContent(href);
+            });
+        }
+    </script>
+
+</body>
+</html>

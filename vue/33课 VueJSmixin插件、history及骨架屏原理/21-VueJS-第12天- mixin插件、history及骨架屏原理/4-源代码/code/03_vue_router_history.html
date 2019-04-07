@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a class="router-link" href="/" >Home</a>
+    <a class="router-link" href="/about" >About</a>
+
+
+    <div id="router-view">
+        
+    </div>
+
+    <script type="text/javascript">
+        var a_s = document.querySelectorAll('a');
+        var routerView = document.getElementById('router-view');
+
+
+        function changeContent (href) {
+             switch (href) {
+                    case '/' :
+                    routerView.innerHTML = `<div>
+                        首页
+                    </div>`;
+                    break;
+                    case '/about' :
+                    routerView.innerHTML = `<div>
+                        关于我们
+                    </div>`;
+                    break;
+                }
+        }
+
+
+        // 初始行为
+        // 获取url路径
+        changeContent(location.pathname);
+
+
+        for (var i = a_s.length - 1; i >= 0; i--) {
+            a_s[i].addEventListener('click',function(e){
+                e.preventDefault();
+                var href = e.target.getAttribute('href');
+
+                // 变更地址栏
+                history.pushState({},'',href);
+                // 匹配 模拟一堆routes
+               changeContent(href);
+            });
+        }
+    </script>
+
+</body>
+</html>
