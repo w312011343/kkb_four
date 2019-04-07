@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>111</div>
+    <div>222</div>
+    <div>333</div>
+    <div>444</div>
+    <div>555</div>
+</body>
+<script>
+    // var divs=document.getElementsByTagName("div");
+    
+    // for (var i = 0; i < divs.length; i++) {
+    //     const element = divs[i];
+    //     element.onclick=function(){
+    //         //i是来自于全局作用域
+    //         alert(i)
+    //     }
+    // }
+
+    //执行完for循环之后，i的值已经变成了5
+
+
+    var divs=document.getElementsByTagName("div");
+    
+    for (var i = 0; i < divs.length; i++) {
+        const element = divs[i];
+        //闭包的解决方案
+        element.onclick=(function(j){
+            return function(){
+                //i是来自于全局作用域
+                alert(j)
+            }
+        })(i);
+    }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var age=18;
+    var o={
+        age:10,
+        say(){
+            //age是一个属性
+            // console.log(this.age);
+
+            //age是一个变量
+            //-->age这个变量来自于哪里？-->作用域链
+            //  -->发现age是全局作用域中声明的变量，age：18
+            console.log(age);
+        }
+    }
+    o.say();    //10
+</script>
+</html>

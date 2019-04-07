@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Person(){
+
+    }
+    Person.prototype.run=()=>{
+        console.log('跑了');
+    }
+
+
+    //类的方式
+    class Student{
+        //构造方法
+        constructor(age){
+            this.age=age;
+        }
+        run(){
+            console.log(`一个${this.age}岁的小伙子在跑步`);
+        }
+    }
+
+    var s1=new Student(18);
+
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //构造函数的方式
+    function Person(name,age){
+        this.name=name;
+        this.age=age;
+    }
+
+    var p1=new Person("王二麻子",8);
+
+
+    //类的方式
+    class Student{
+        //构造方法
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+        }
+    }
+    var s1=new Student("爱因斯坦",88);
+</script>
+</html>

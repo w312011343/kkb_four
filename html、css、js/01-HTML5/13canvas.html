@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		canvas {
+			 border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	 <canvas width="600" height="400"></canvas>
+
+
+
+	 <script type="text/javascript">
+	 	 //获取canvas画布对象
+	 	 var canvas =document.querySelector("canvas");
+
+	 	 //获取绘图上下文
+	 	 var ctx=canvas.getContext("2d");
+
+	 	 //先落笔
+	 	  ctx.moveTo(100, 100);
+
+	 	 // 连线
+	 	 ctx.lineTo(300, 100);
+
+	 	//描边
+	 	ctx.stroke();
+
+	 	ctx.beginPath();
+	 	//带颜色的横线
+	 	ctx.moveTo(100, 150);
+	 	ctx.lineTo(300, 150);
+	 	ctx.strokeStyle="red";  //红色的线
+	 	ctx.lineWidth="20";   //设置线宽
+	 	ctx.stroke();
+
+
+	 </script>
+</body>
+</html>

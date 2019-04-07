@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box {
+			 width: 300px;
+			 height: 300px;
+			 border: 10px solid red;
+			 margin: 50px auto;
+
+			 /* 设置边框图片 */
+			 border-image-source: url("2.png");
+
+			 /* 边框裁切 */
+			 border-image-slice: 20;
+
+			 /* 设置边框平铺方式 */
+			 border-image-repeat: stretch;
+
+			 /* 设置边框宽度 */
+			 border-image-width: 20px;
+		}
+	</style>
+</head>
+<body>
+	
+	 <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box {
+			width: 0px;
+			height: 0px;
+			border-left: 100px solid yellow;
+			border-right: 100px solid red;
+			border-bottom: 100px solid green;
+			border-top: 100px solid pink;
+			border-radius: 50%;
+
+
+			/* 调用 */
+			
+			/* 动画名称 */
+			animation-name: rotate;
+
+			/* 设置动画时间 */
+			animation-duration: 2s;
+
+			/* 设置动画执行的次数:  infinite 无限执行; */
+			animation-iteration-count: infinite;
+
+			/* 动画执行的速度类型 */
+			animation-timing-function: linear;
+
+			/* 设置动画逆波 */
+			animation-direction: alternate;
+
+			/* 设置动画延时 */
+			animation-delay: 1s;
+
+			/* 设置动画结束时候的状态 */
+			animation-fill-mode: forwards;
+
+		}
+
+		.box:hover {
+			/* 动画暂停 */
+			animation-play-state: paused;
+		}
+
+
+		/* 1定义动画集 */
+		@keyframes  rotate {
+
+			/* 定义开始状态  0%*/
+			0% {
+				/* transform: rotateZ(0deg); */
+				transform: translateX(0px);
+			}
+
+			50% {
+
+			}
+
+			/* 结束状态 100%*/
+			100% {
+			   /* transform: rotateZ(360deg); */
+
+			   transform: translateX(200px);
+			}
+		}
+	</style>
+</head>
+<body>
+	
+	 <div class="box"></div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="1.php" method="get">
+		<input type="text" name="uname" pattern="^\d{4,11}" required class="uname">
+		<input type="submit" name="">
+	</form>
+
+	<script type="text/javascript">
+		   var input=document.querySelector(".uname");
+		   input.oninvalid=function(){   	
+		   		if(this.validity.patternMismatch===true){
+					this.setCustomValidity("请输入4到11为数字");
+		 		}else{
+		 			this.setCustomValidity("");
+		 		}
+		   }
+	</script>
+</body>
+</html>

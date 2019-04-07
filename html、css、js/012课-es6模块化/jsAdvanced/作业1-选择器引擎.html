@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // $("#abc")   //id
+    // $(".abc")   //类
+    // $("span")   //标签
+
+    function $(selector){
+        //id选择器都是以#开头的
+
+        //#a
+        //#abc
+        //#1a   -->false
+        if(/^#\D[a-zA-Z0-9]*$/.test(selector)){
+            console.log('id选择器');
+        }else if(/^\.\D[a-zA-Z0-9]*$/.test(selector)){
+            console.log('类选择器');
+        }else if(/^[a-zA-Z][a-zA-Z0-9]*$/.test(selector)){
+            console.log('标签选择器');
+        }else {
+            console.log('其他');
+        }
+        
+    }
+</script>
+</html>

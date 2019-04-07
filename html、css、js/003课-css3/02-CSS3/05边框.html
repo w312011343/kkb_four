@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box {
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+			border-radius: 10px;
+			
+			/* 
+			  第一个0px 代表阴影在水平方向的偏移量（正数向右，负数向左）
+
+			  第二个0px
+			   代表阴影在垂直方向的偏移量（正数代表向下，负数代表向上）
+
+
+			   第三个10px
+
+			   代表阴影的模糊度 （不能设置负数）
+
+
+			  设置多个阴影，使用逗号隔开
+			 */
+			box-shadow:0px 0px 10px red,
+					   5px -5px 10px blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

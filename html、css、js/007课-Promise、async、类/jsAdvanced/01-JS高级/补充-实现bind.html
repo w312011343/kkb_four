@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //bind方法
+    //1、bind方法放在函数的原型中
+    //  -->fn.__proto__===fn的构造函数.prototype
+    //  -->所有的函数对象的构造函数是Function
+    //      -->Function 创建了Function
+    //      -->Function 创建了Object 
+    //      -->Function 创建了fn
+    Function.prototype._bind=function(target){
+        //这里的this其实fn
+
+        //target表示新函数的内部的this的值
+        
+        //利用闭包创建一个内部函数，返回那个所谓的新函数
+        return ()=>{
+            //执行fn里面的逻辑
+            this.call(target);  //this.apply(target)
+        }
+
+        // //等价于：
+        // var _that=this;
+        // return function(){
+        //     _that.call(target);
+        // }
+    }
+
+    function fn(){
+        console.log(this);
+    }
+
+    var _f1=fn.bind({age:18})
+
+</script>
+</html>

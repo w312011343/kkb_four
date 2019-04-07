@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div class="one" data-test-name="123"></div>
+
+	<script type="text/javascript">
+		
+		//获取标签的自定义属性值
+		var list=document.querySelector(".one").dataset;
+
+			//设置自定义属性
+			list.age=20;
+			list.testHeight=180;
+		// console.log(list.testName);
+		// console.log(list.test-name);
+	</script>
+</body>
+</html>

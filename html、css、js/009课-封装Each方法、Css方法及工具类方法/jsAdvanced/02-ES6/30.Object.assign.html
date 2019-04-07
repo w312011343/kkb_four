@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Object.assign 就是进行对象的浅拷贝
+    var source={ age:18,height:170,className:"3年2班" }
+
+    //克隆一个新对象出来
+    var newObj=Object.assign({},source);
+    console.log(newObj);
+
+    var newObj2={};
+    Object.assign(newObj2,source);
+    console.log(newObj2);
+</script>
+</html>

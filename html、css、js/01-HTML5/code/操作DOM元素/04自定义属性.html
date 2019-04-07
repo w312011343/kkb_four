@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.nav {
+			 height: 50px;
+			 background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	
+	 <div class="nav"  data-name-test="zs" data-age="123">123</div>
+
+
+	 <script type="text/javascript">
+	 	
+	 	var data=document.querySelector(".nav").dataset;
+	 	console.log(data);
+
+	 	// var  test=document.querySelector("div").getAttribute("class");
+	 	
+	 	//设置
+	 	
+	 	var  nav=document.querySelector(".nav");
+	 		 nav.dataset.test="abc";
+	 		 nav.dataset.TestAbc="123";
+	 		 nav.dataset["hh"]="呵呵";
+
+
+	 </script>
+
+</body>
+</html>
